@@ -3,5 +3,6 @@ name = "lambda-a"
 dynamic = ["version"]
 dependencies = [
     "boto3",
+    "pydantic",
     "urllib3",
 ]
