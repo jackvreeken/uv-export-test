@@ -5,7 +5,6 @@ from logging import getLogger
 import boto3
 import boto3.s3.transfer as s3transfer
 
-
 logging.basicConfig()
 log = getLogger()
 log.setLevel(os.environ.get("LOG_LEVEL", "INFO"))
