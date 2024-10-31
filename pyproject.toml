@@ -5,8 +5,14 @@ requires-python = "~=3.12"
 
 [dependency-groups]
 dev = [
-    "pre-commit",
+    "pre-commit >= 4.0.1",
+    "lambda-a",
+    "lambda-b",
 ]
+
+[tool.uv.sources]
+lambda-a = { workspace = true }
+lambda-b = { workspace = true }
 
 [tool.uv.workspace]
 members = ["src/*"]

@@ -289,13 +289,19 @@ source = { virtual = "." }
 
 [package.dev-dependencies]
 dev = [
+    { name = "lambda-a" },
+    { name = "lambda-b" },
     { name = "pre-commit" },
 ]
 
 [package.metadata]
 
 [package.metadata.requires-dev]
-dev = [{ name = "pre-commit" }]
+dev = [
+    { name = "lambda-a", virtual = "src/lambda_a" },
+    { name = "lambda-b", virtual = "src/lambda_b" },
+    { name = "pre-commit", specifier = ">=4.0.1" },
+]
 
 [[package]]
 name = "virtualenv"
