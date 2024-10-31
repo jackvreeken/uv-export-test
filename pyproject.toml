@@ -1,7 +1,27 @@
 [project]
 name = "uv-export-test"
-version = "0.1.0"
-description = "Add your description here"
-readme = "README.md"
-requires-python = ">=3.12"
-dependencies = []
+dynamic = ["version"]
+requires-python = "~=3.12"
+
+[dependency-groups]
+dev = [
+    "pre-commit",
+]
+
+[tool.uv.workspace]
+members = ["src/*"]
+exclude = ["src/*.egg-info"]
+
+[tool.ruff]
+ignore = [
+    "B006", # use mutable data structures for argument defaults
+]
+line-length = 100
+select = [
+    "B", # flake8-bugbear
+    "C4", # flake8-comprehensions
+    "E", # default / pycodestyle
+    "F", # default / pyflakes
+    "I", # isort
+    "W", # pycodestyle
+]

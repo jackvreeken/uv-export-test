@@ -1,0 +1,7 @@
+[project]
+name = "lambda-a"
+dynamic = ["version"]
+dependencies = [
+    "boto3",
+    "urllib3",
+]
